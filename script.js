@@ -33,32 +33,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const formSuccess = contactForm.querySelector('.form-success');
 
     contactForm.addEventListener('submit', (e) => {
-      // FIX: Linked directly to your correct HTML form IDs
       const name = document.getElementById('form-name')?.value.trim() || "";
       const email = document.getElementById('form-email')?.value.trim() || "";
       const message = document.getElementById('form-message')?.value.trim() || "";
       
-      // Validation check must run first before modifying UI states
       if (!name || !email || !message) {
         e.preventDefault();
         showToast('Please fill out all fields with valid content.');
         return;
       }
 
-      // Apply UI treatment only on verified validation pass
       if (submitBtn) submitBtn.disabled = true;
       if (formLoading) formLoading.classList.add('active');
       if (formSuccess) formSuccess.classList.remove('active');
     });
   }
 
-  // Safe Decryption & Clipboard Copy for Email (FIX: Fixed dual competing handlers)
+  // Safe Decryption & Clipboard Copy for Email
   const emailCopyBtn = document.getElementById('email-copy-link') || document.querySelector('.copy-email');
   if (emailCopyBtn) {
     emailCopyBtn.addEventListener('click', async (e) => {
       e.preventDefault();
       
-      // Safely decodes 'm.hamza.2007.2022@gmail.com' at runtime
       const secureEmail = atob('bS5oYW16YS4yMDA3LjIwMjJAZ21haWwuY29t'); 
       
       try {
@@ -353,30 +349,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Monotype Ink-Settling (Desktop Exclusive Engine Wrapper)
+    // Monotype Ink-Settling (Desktop Exclusive Engine Wrapper) - OPTIMIZED FOR WORD-BY-WORD
     const inkReveals = document.querySelectorAll('.ink-reveal');
     if (inkReveals.length > 0 && window.innerWidth > 768) {
       const inkTimeline = gsap.timeline({ paused: true });
 
       inkReveals.forEach((element) => {
         const originalText = element.textContent.trim();
-        element.setAttribute('aria-label', originalText);
         element.innerHTML = ''; 
 
-        const words = originalText.split(' ');
+        const words = originalText.split(/\s+/);
 
         words.forEach((word, wordIndex) => {
           const wordSpan = document.createElement('span');
+          wordSpan.textContent = word;
           wordSpan.classList.add('ink-word');
-          wordSpan.setAttribute('aria-hidden', 'true');
-
-          [...word].forEach((char) => {
-            const charSpan = document.createElement('span');
-            charSpan.textContent = char;
-            charSpan.classList.add('ink-char');
-            wordSpan.appendChild(charSpan);
-          });
-
           element.appendChild(wordSpan);
 
           if (wordIndex < words.length - 1) {
@@ -386,11 +373,11 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-        const chars = element.querySelectorAll('.ink-char');
+        const wordSpans = element.querySelectorAll('.ink-word');
 
-        inkTimeline.fromTo(chars,
-          { opacity: 0.08, color: 'var(--muted)', filter: 'blur(4px)', scale: 1.05 },
-          { opacity: 1, color: 'var(--text)', filter: 'blur(0px)', scale: 1, stagger: 0.1, duration: 0.5, ease: 'none' },
+        inkTimeline.fromTo(wordSpans,
+          { opacity: 0.08, color: 'var(--muted)', filter: 'blur(4px)', scale: 1.02 },
+          { opacity: 1, color: 'var(--text)', filter: 'blur(0px)', scale: 1, stagger: 0.12, duration: 0.4, ease: 'none' },
           ">" 
         );
       });

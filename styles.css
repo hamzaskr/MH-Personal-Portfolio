@@ -816,7 +816,7 @@ p {
 .directory-label {
   font-family: 'Inter', sans-serif;
   font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.3); /* Understated, modern label tone */
+  color: #949494; /* Boosted from low-contrast opacity layer to pass AA compliance standard */
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -857,7 +857,7 @@ p {
 .copyright-text {
   font-family: 'Inter', sans-serif;
   font-size: 0.72rem;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.6); /* Shifted from 0.25 opacity up to 0.6 to clear contrast minimums */
   letter-spacing: 0.01em;
   margin: 0;
 }
@@ -893,4 +893,10 @@ p {
   .footer-directory-col {
     gap: 1rem;
   }
+}
+
+.ink-word {
+  display: inline-block;
+  transform-origin: center center;
+  will-change: transform, opacity, filter;
 }

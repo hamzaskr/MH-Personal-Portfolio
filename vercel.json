@@ -28,6 +28,15 @@
           "value": "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' https://fonts.googleapis.com https://unpkg.com 'unsafe-inline'; img-src 'self' https: data:; font-src https://fonts.gstatic.com; form-action 'self' https://formspree.io; frame-ancestors 'none'; object-src 'none';"
         }
       ]
+    },
+    {
+      "source": "/(.*)\\.(css|js|webp|svg|png|jpg|jpeg|ico|woff2)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }
