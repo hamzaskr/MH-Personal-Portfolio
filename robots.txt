@@ -1,5 +1,5 @@
 # Security & SEO Configuration
-
+Link: <https://hamzaskr.github.io/MH-Personal-Portfolio/llms.txt>; rel="llms-txt"
 # Allow all bots to crawl
 User-agent: *
 Allow: /

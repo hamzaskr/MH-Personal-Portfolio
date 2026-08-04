@@ -1,0 +1,33 @@
+# Muhammad Hamza
+> A-Level Student (Nixor College) & Software Developer
+
+## About
+Muhammad Hamza is an A-Level student enrolled at Nixor College (2025–2027) with a passion for software development and practical problem-solving. He builds web utilities and automation software focused on automating repetitive tasks and designing clean, intuitive user interfaces for non-technical users.
+
+## Core Technical Focus Areas
+- **Backend & Automation:** Python scripting for task automation and backend logic.
+- **Frontend & Modular Web:** Responsive web design using standard Vanilla JavaScript, HTML5, and CSS3 to deliver fast, clean UI/UX.
+- **Problem Solving:** Data parsing, real-time client-side processing, dynamic web applications, and audio signal processing.
+
+## Featured Projects
+
+### EduStats Utility
+- **Description:** A client-side browser utility built to process raw classroom marks into clean student intervention data. Features localized CSV log parsing, basic trend aggregation, dynamic chart rendering, and lightweight data exports.
+- **Tech Stack:** Vanilla JavaScript, HTML5, CSS3
+- **Live Demo:** https://muhammadhamza27-commits.github.io/EduStats/
+
+### Badminton Tournament App
+- **Description:** A specialized web application designed to streamline badminton competition management. Automates match sequencing, tracks score progression in real time, and dynamically updates bracket hierarchies without backend latency.
+- **Tech Stack:** Vanilla JavaScript, HTML5, CSS3
+- **Live Demo:** https://hamzaskr.github.io/BadmintonTournamentApp/
+
+### Echo Chamber
+- **Description:** An unorthodox cryptographic web utility inspired by covert communications. Encrypts and synthesizes text payloads into custom audio signals that sound unintelligible to human hearing, requiring the dedicated decoder module to reveal hidden transmissions.
+- **Tech Stack:** Vanilla JavaScript, Python (Audio Processing Libraries)
+- **Live Demo:** https://echo-chamber-inky.vercel.app/
+
+## Discovery & Contact
+- **Portfolio:** https://hamzaskr.github.io/MH-Personal-Portfolio/
+- **GitHub:** https://github.com/hamzaskr
+- **LinkedIn:** https://www.linkedin.com/in/mohammed-hamza-941672419/
+- **Instagram:** https://www.instagram.com/m.hamza.2007/
